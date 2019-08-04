@@ -89,6 +89,21 @@ hr
     {
         font-size: 0.8rem;
     }
+
+    .data >*
+    {
+        font-size: 19px;
+    }
+
+    .name h3
+    {
+        font-size: 25px;
+    }
+
+    .head
+    {
+        font-size: 25px;
+    }
 }
 
 @media only screen and (max-width: 780px)
@@ -121,6 +136,32 @@ hr
     {
         font-size: 15px;
     }
+
+    .information
+    {
+        flex-basis: 100%;
+        max-height: 50%;
+    }
+    .message
+    {
+        flex-basis: 100%;
+        max-height: 50%;
+    }
+
+    .data >*
+    {
+        font-size: 16px;
+    }
+
+    .name h3
+    {
+        font-size: 22px;
+    }
+
+    .head
+    {
+        font-size: 22px;
+    }
 }
 
 .header
@@ -134,8 +175,7 @@ hr
     grid-column: 1;
     z-index: 2;
     height: 50px;
-    width: 100%;
-    
+    width: 100%;   
     justify-content: center;
     align-items: center;
     
@@ -160,8 +200,7 @@ hr
 .text
 {
     transform: skew(20deg);
-    text-align: center;
-    
+    text-align: center;  
 }
 
 .item:hover
@@ -180,10 +219,11 @@ hr
 
 .wrapper2
 {
+    grid-row: 4;
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 2fr 3fr;
-    background-image: url(skills.jpg);
+    background-image: url(images/skills.jpg);
     background-size: cover;
     height: 100vh;
     min-height: 910px;
@@ -261,6 +301,7 @@ hr
 
 .portfolio
 {
+    grid-row: 5;
     position: relative;
     min-height: 100vh;
     height: auto;
@@ -290,6 +331,11 @@ hr
     transform: scale(1.15);
 }
 
+.row > *:hover .caption
+{
+    opacity: 0;
+}
+
 .portfolioItem
 {
     display: inline-flex;
@@ -299,19 +345,139 @@ hr
     box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.4);
     width: auto;
     height: auto;
+    position: relative;
 }
 
 .caption
 {
-    background-color: aliceblue;
+    background-color: rgba(240, 248, 255, 0.8);
+    position: absolute;
+    bottom: 0;
     color: black;
     height: 3rem;
     padding-left: 5px;
     padding-right: 5px;
+    transition: opacity 0.2s ease-in-out;
 }
 
 .img-fluid
 {
     width: 100%;
     height: auto;
+}
+
+.contactWrapper
+{
+    grid-row: 6;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/keyboard.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex-wrap: wrap;
+
+}
+
+.information
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 35%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.name
+{
+    grid-row: 1;
+    text-align: left;
+    padding: 15px;
+}
+
+.data
+{
+    grid-row: 2;
+    text-align: left;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.info
+{
+    margin-left: 2rem;
+    color: rgb(0, 88, 221);
+    font-weight: 500;
+}
+
+.links
+{
+    text-align: left;
+    padding: 15px;
+}
+
+.linkimg
+{
+    width: 50px;
+    height: auto;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.linkbar a
+{
+    text-decoration: none;
+}
+
+.message
+{
+    display: flex;
+    width: 65%;
+    height: 100%;
+    background-color: rgba(41, 82, 163, 0.75);
+}
+
+.form
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 30px;
+}
+
+.form > *
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 100%;
+    border: none;
+    background-color: rgba(228, 228, 228, 0.8);
+    box-shadow: 4px 4px 5px 0px rgba(0,0,0,0.4);
+}
+
+.input
+{
+    height: 30%;
+}
+
+.submit
+{
+    background-color: rgb(211, 211, 211);
+    align-self: flex-end;
+    width: 120px;
+    border-radius: 30px;
+    transition: all 0.2s ease-in-out;
+}
+
+.submit:hover
+{
+    background-color: rgb(141, 141, 141); 
 }
